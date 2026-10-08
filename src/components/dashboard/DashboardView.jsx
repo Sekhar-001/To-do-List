@@ -106,6 +106,7 @@ export const DashboardView = () => {
           display: 'flex',
           alignItems: 'center',
           gap: '1rem',
+          flexWrap: 'wrap',
           boxShadow: '0 4px 12px rgba(99, 102, 241, 0.15)'
         }}>
           <div style={{
@@ -122,7 +123,7 @@ export const DashboardView = () => {
             <BarChart3 size={22} />
           </div>
 
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: '1 1 200px', minWidth: 0 }}>
             <div style={{ fontSize: '0.75rem', fontWeight: '700', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
               ⏰ Scheduled Mock Test Reminder
             </div>
@@ -131,7 +132,7 @@ export const DashboardView = () => {
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
             <button
               className="btn btn-primary"
               style={{ fontSize: '0.85rem', padding: '0.55rem 1.1rem' }}

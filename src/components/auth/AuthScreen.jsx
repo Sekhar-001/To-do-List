@@ -349,7 +349,7 @@ export const AuthScreen = () => {
               {isSubmitting ? (
                 <Loader2 size={18} className="animate-spin" />
               ) : (
-                <span>{isSignUp ? 'Create My Account 🚀' : 'Sign In to Workspace &rarr;'}</span>
+                <span>{isSignUp ? 'Create My Account 🚀' : 'Sign In to Workspace →'}</span>
               )}
             </button>
 

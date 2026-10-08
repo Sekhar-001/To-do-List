@@ -56,27 +56,8 @@ export const ProfileModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div style={{
-      position: 'fixed',
-      inset: 0,
-      backgroundColor: 'var(--modal-overlay)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 1000,
-      padding: '1rem',
-      backdropFilter: 'blur(4px)',
-      animation: 'fadeIn 0.2s ease-out'
-    }}>
-      <div style={{
-        width: '100%',
-        maxWidth: '520px',
-        backgroundColor: 'var(--bg-secondary)',
-        border: '1px solid var(--border-color)',
-        borderRadius: 'var(--radius-xl)',
-        boxShadow: 'var(--card-shadow-hover)',
-        overflow: 'hidden'
-      }}>
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal-content" style={{ maxWidth: '540px', padding: 0, overflow: 'hidden' }} onClick={(e) => e.stopPropagation()}>
         {/* Header */}
         <div style={{
           padding: '1.25rem 1.5rem',
@@ -117,7 +98,7 @@ export const ProfileModal = ({ isOpen, onClose }) => {
             <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: '700', marginBottom: '0.5rem', color: 'var(--text-secondary)' }}>
               Profile Avatar
             </label>
-            <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', flexWrap: 'wrap' }}>
               {AVATAR_OPTIONS.map((url, idx) => (
                 <img
                   key={idx}

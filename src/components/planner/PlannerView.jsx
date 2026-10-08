@@ -118,7 +118,7 @@ export const PlannerView = ({ onOpenTimer }) => {
         flexWrap: 'wrap',
         gap: '1.25rem'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
           <div>
             <div style={{ fontSize: '0.8rem', fontWeight: '700', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
               Day Planned Time
@@ -140,7 +140,7 @@ export const PlannerView = ({ onOpenTimer }) => {
           </div>
         </div>
 
-        <div style={{ minWidth: '220px' }}>
+        <div style={{ flex: '1 1 200px', minWidth: 0, width: '100%', maxWidth: '320px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.82rem', fontWeight: '700', marginBottom: '0.35rem' }}>
             <span>Target Adherence</span>
             <span>{totalPlanned > 0 ? Math.min(100, Math.round((totalActual / totalPlanned) * 100)) : 0}%</span>
