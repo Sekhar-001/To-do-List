@@ -50,12 +50,12 @@ export const MobileBottomNav = () => {
       <button
         onClick={() => setIsMobileSidebarOpen(prev => !prev)}
         className="mobile-nav-btn"
-        aria-label="Menu"
+        aria-label="Navigation Menu"
       >
         <div className="mobile-nav-icon-wrapper">
-          <Menu size={20} />
+          <Menu size={20} strokeWidth={2.5} />
         </div>
-        <span className="mobile-nav-label">More</span>
+        <span className="mobile-nav-label">Menu</span>
       </button>
     </nav>
   );

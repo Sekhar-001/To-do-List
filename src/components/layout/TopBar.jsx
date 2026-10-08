@@ -41,10 +41,10 @@ export const TopBar = () => {
         <button
           className="btn-icon mobile-menu-toggle"
           onClick={() => setIsMobileSidebarOpen(prev => !prev)}
-          title="Open Menu"
+          title="Open Navigation Menu"
           aria-label="Open Navigation Menu"
         >
-          <Menu size={20} />
+          <Menu size={22} strokeWidth={2.5} />
         </button>
 
         <div className="mobile-brand">
