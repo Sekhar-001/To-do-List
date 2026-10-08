@@ -2,6 +2,15 @@
 
 A modern, full-featured web and mobile application designed to help students organize their syllabus, plan daily study schedules, track mock test scores, manage revision cycles, and achieve their academic goals.
 
+🌐 **Live Demo**: [https://to-do-list-lac-ten-17.vercel.app/](https://to-do-list-lac-ten-17.vercel.app/)
+
+---
+
+## 🔗 Live Application
+
+You can access and use the live application directly in your browser:
+👉 **[Open EduTrack App](https://to-do-list-lac-ten-17.vercel.app/)**
+
 ---
 
 ## ✨ Features
@@ -27,7 +36,7 @@ A modern, full-featured web and mobile application designed to help students org
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Backend / Database**: [Firebase](https://firebase.google.com/) (Authentication & Firestore)
 - **Mobile Runtime**: [Capacitor](https://capacitorjs.com/) (Android)
-- **Deployment**: [Vercel](https://vercel.com/) / Static Web Hosting
+- **Deployment**: [Vercel](https://to-do-list-lac-ten-17.vercel.app/)
 
 ---
 
@@ -35,8 +44,8 @@ A modern, full-featured web and mobile application designed to help students org
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/Sekhar-001/To-do-List.git
+cd To-do-List
 ```
 
 ### 2. Install dependencies
