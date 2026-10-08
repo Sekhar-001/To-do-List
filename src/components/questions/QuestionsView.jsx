@@ -105,8 +105,8 @@ export const QuestionsView = () => {
       </div>
 
       {/* Filter Toolbar */}
-      <div className="card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-        <div style={{ flex: 1, minWidth: '240px', position: 'relative' }}>
+      <div className="card filter-toolbar">
+        <div className="filter-search-box">
           <Search size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
           <input
             type="text"
@@ -119,8 +119,7 @@ export const QuestionsView = () => {
         </div>
 
         <select
-          className="select-field"
-          style={{ width: 'auto', minWidth: '180px' }}
+          className="select-field filter-select"
           value={selectedSubjectFilter}
           onChange={(e) => setSelectedSubjectFilter(e.target.value)}
         >

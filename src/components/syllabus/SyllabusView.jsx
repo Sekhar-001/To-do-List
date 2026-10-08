@@ -141,10 +141,9 @@ export const SyllabusView = () => {
       </div>
 
       {/* Filter Toolbar */}
-      <div className="card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+      <div className="card filter-toolbar">
         <select
-          className="select-field"
-          style={{ width: 'auto', minWidth: '180px' }}
+          className="select-field filter-select"
           value={selectedSubject}
           onChange={(e) => setSelectedSubject(e.target.value)}
         >
@@ -155,8 +154,7 @@ export const SyllabusView = () => {
         </select>
 
         <select
-          className="select-field"
-          style={{ width: 'auto', minWidth: '180px' }}
+          className="select-field filter-select"
           value={selectedStatus}
           onChange={(e) => setSelectedStatus(e.target.value)}
         >

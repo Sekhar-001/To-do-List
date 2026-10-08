@@ -155,7 +155,7 @@ export const PlannerView = ({ onOpenTimer }) => {
       </div>
 
       {/* Days of Week Tab Navigation */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', overflowX: 'auto', paddingBottom: '0.25rem' }}>
+      <div className="filter-pill-container">
         {daysOfWeek.map(day => {
           const isSelected = selectedDay === day;
           const dayCount = plannerSlots.filter(s => s.day === day).length;

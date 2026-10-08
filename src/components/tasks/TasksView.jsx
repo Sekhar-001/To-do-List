@@ -143,8 +143,8 @@ export const TasksView = () => {
       </div>
 
       {/* Filter & Toolbar Area */}
-      <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', overflowX: 'auto', paddingBottom: '0.25rem' }}>
+      <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+        <div className="filter-pill-container">
           {['All', 'Today', 'Tomorrow', 'ThisWeek', 'Overdue', 'Completed'].map(filter => (
             <button
               key={filter}
@@ -159,7 +159,8 @@ export const TasksView = () => {
                 fontWeight: '700',
                 fontSize: '0.82rem',
                 cursor: 'pointer',
-                whiteSpace: 'nowrap'
+                whiteSpace: 'nowrap',
+                flexShrink: 0
               }}
             >
               {filter === 'ThisWeek' ? 'This Week' : filter}
@@ -167,8 +168,8 @@ export const TasksView = () => {
           ))}
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-          <div style={{ flex: 1, minWidth: '220px', position: 'relative' }}>
+        <div className="filter-toolbar">
+          <div className="filter-search-box">
             <Search size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
             <input
               type="text"
@@ -181,8 +182,7 @@ export const TasksView = () => {
           </div>
 
           <select
-            className="select-field"
-            style={{ width: 'auto', minWidth: '160px' }}
+            className="select-field filter-select"
             value={selectedSubjectFilter}
             onChange={(e) => setSelectedSubjectFilter(e.target.value)}
           >
@@ -193,8 +193,7 @@ export const TasksView = () => {
           </select>
 
           <select
-            className="select-field"
-            style={{ width: 'auto', minWidth: '150px' }}
+            className="select-field filter-select"
             value={selectedPriorityFilter}
             onChange={(e) => setSelectedPriorityFilter(e.target.value)}
           >

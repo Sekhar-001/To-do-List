@@ -36,7 +36,7 @@ export const TopBar = () => {
 
   return (
     <header className="header">
-      {/* Left: Mobile Sidebar Toggle & Global Search trigger */}
+      {/* Left: Mobile Sidebar Toggle & Search / Brand */}
       <div className="header-left">
         <button
           className="btn-icon mobile-menu-toggle"
@@ -46,6 +46,10 @@ export const TopBar = () => {
         >
           <Menu size={20} />
         </button>
+
+        <div className="mobile-brand">
+          <span>EduTrack</span><span style={{ color: 'var(--accent-primary)' }}>.pro</span>
+        </div>
 
         {/* Desktop & Tablet Search Bar Trigger */}
         <button
@@ -57,7 +61,10 @@ export const TopBar = () => {
           <span className="search-placeholder">Search tasks, topics, exams...</span>
           <kbd className="search-kbd">Ctrl K</kbd>
         </button>
+      </div>
 
+      {/* Right: Actions, Streak, Notifications, Theme Toggle & User Profile */}
+      <div className="header-right">
         {/* Mobile Search Icon Button */}
         <button
           className="btn-icon mobile-search-btn"
@@ -67,14 +74,11 @@ export const TopBar = () => {
         >
           <Search size={18} />
         </button>
-      </div>
 
-      {/* Right: Install App, Streak, Notifications, Theme Toggle & User Profile */}
-      <div className="header-right">
-        {/* Install App Button (Visible if not in standalone or on desktop/mobile for guidance) */}
+        {/* Install App Button (Visible on desktop/laptop) */}
         {!isStandalone && (
           <button
-            className="install-app-btn"
+            className="install-app-btn desktop-only"
             onClick={installPWA}
             title="Download & Install App on this device"
           >
